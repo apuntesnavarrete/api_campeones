@@ -1,20 +1,17 @@
-const { Sequelize, DataTypes, Model } = require('sequelize');
+const { Sequelize, DataTypes, Model, INTEGER } = require('sequelize');
 const { sequelize } = require('./database')
 
 class User extends Model {}
 
 User.init({
-    id: {
-        type:DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey:true,
-    },
-      name: DataTypes.STRING,
+     id:INTEGER,
+     id_fb:INTEGER
+
   
 }, {
   // Other model options go here
   sequelize, // We need to pass the connection instance
-  modelName: 'User' // We need to choose the model name
+  modelName: 'ejemplo_user' // We need to choose the model name
 });
 
 // the defined model is the class itself
