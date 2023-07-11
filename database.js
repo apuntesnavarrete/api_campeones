@@ -5,7 +5,7 @@ const setupModels = require('../db/models/user.model')
 */
 
 const pool = mysql.createPool({
-  host     : 'localhost',
+  host     : "database-1.ctn2edyd5zg5.us-east-2.rds.amazonaws.com",
        user     : process.env.DB_USER,
        password : process.env.DB_PASSWORD,
        database : process.env.DB_DATABASE
