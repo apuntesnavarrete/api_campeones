@@ -7,7 +7,6 @@ const cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var campeonesRouter = require('./routes/campeones');
-const {sequelize} = require("./database")
 
 var app = express();
 
@@ -40,15 +39,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-(async ()=>{
-  try{
-    await sequelize.authenticate();
-    await sequelize.sync();
-    console.log("conectado ala base de datos")
-  }catch (error){
 
-  }
-})()
 
 
 module.exports = app;
